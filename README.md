@@ -31,7 +31,7 @@ this nestjs project is a sample of using s3 functionality for uploding files in 
 nodejs server resources for buffering or serving files.
 
 # Description
-## description of src/s3.service.ts:
+## description of src/s3/s3.service.ts:
 
 `generatePutSignedUrlForUpload`: with this method we can generate a pre signed url that user can upload files in that with PUT method where we want in our s3 bucket
 
