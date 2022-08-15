@@ -30,6 +30,24 @@
 this nestjs project is a sample of using s3 functionality for uploding files in large scale that doesn't use the 
 nodejs server resources for buffering or serving files.
 
+## Description
+# description of src/s3.service.ts:
+
+`generatePutSignedUrlForUpload`: with this method we can generate a pre signed url that user can upload files in that with PUT method where we want in our s3 bucket
+
+`generateGetFileSignedUrl`: with this method we create a GET pre signed url for that file who are in the private buckets. and we only want to show that files to the users that are authenticated. we generate a signed url for that particular user. and others can't see the content.
+
+`uploadFileToBucket`: method for upload files to the bucket directly without preSignedUrl.
+
+`checkObjectExistInBucket`: with this method we can check existence of a file it can be used for submitting forms that includes files upload with pre signed url.
+
+`copyObject` and `moveObject`: with this method we can copy one file from some location in our s3 service to other location. it used for temporary buckets. that we first upload files in temporary buckets then we move them to the target bucket.
+
+`deleteObject`: used for deleting file from the s3 service.
+
+`getAllObjectsInBucket`: with this method we can get the list of all objects in particular location of the buckets.
+
+
 ## Installation
 
 ```bash
